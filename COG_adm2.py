@@ -65,8 +65,6 @@ parser.add_argument('--output', type=str,
 args = parser.parse_args()
 
 
-#print(args)
-
 metaframe = pd.read_csv(args.metadata)
 outFrame=adm2generation(metaframe)
 outFrame.to_csv(args.output, index=False)
