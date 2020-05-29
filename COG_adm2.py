@@ -4,7 +4,7 @@ import geopandas as gp
 import pandas as pd
 import postcodes_io_api
 import argparse
-import adriangb_sjoin
+import sjoin
 import numpy as np
 
 
