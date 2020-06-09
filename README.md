@@ -17,14 +17,14 @@ The script can be run on an existing .csv file containing sample metadata. This 
 
 
 ```bash
-generalisedlibrarytranslate.py metadataInput.csv --output output.csv
+COG_adm2.py metadataInput.csv --output output.csv
 ```
 
 
 Alternatively the column headings used in a non-standardised .csv containing sample metadata can be specified as below.
 
 ```bash
-generalisedlibrarytranslate.py metadataInput.csv\
+COG_adm2.py metadataInput.csv\
 --sampleID 'sampleID' --outerPC 'outerPostcode' --output ./output.csv 
 ```
 
