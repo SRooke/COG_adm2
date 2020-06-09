@@ -35,7 +35,7 @@ def GADMtranslate(coordsFrame):
     invalidPoints = coordsFrame[~coordsFrame['latitude'].notna()]
     coordinateDF = gp.GeoDataFrame(validPoints, geometry=gp.points_from_xy(validPoints.longitude, validPoints.latitude))
     coordinateDF.crs = 'epsg:4326'
-    pointsinPoly = adriangb_sjoin.sjoin_nearest(coordinateDF, ukADM2)
+    pointsinPoly = sjoin.sjoin_nearest(coordinateDF, ukADM2)
     pointsinPoly.rename(columns={'NAME_2': 'adm2', 'outcode': args.outerPC}, inplace=True)
     outDF = pd.DataFrame(pointsinPoly)
     outDF = pd.concat([outDF, invalidPoints], axis=0, ignore_index=True)
